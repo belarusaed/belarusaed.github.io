@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap')
+
+body
+  background-image: url("monika.jpg")
+  background-size: cover
+  background-position: center
+  color: #FFFFFF
+  font-family: 'Montserrat', 'Noto Sans', 'Roboto', 'Segoe UI', sans-serif
+  &:before
+    content: ''
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    //z-index: -1
+    background: rgba(18, 18, 18, 0.975)
+.wrapper
+  padding: 0 calc(50% - 570px)  // 570px is a half of "container" max width
+  height: 100vh
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .left
+    padding-left: 1em
+    h1
+      font-size: xxx-large
+      transform: scaleY(1.15)
+    p
+      font-size: large
+      transform: scaleY(1.15)
+  .right
+    padding-right: 1em
+    text-align: center
+    font-size: x-large
+    h2
+      transform: scaleY(1.15)
+    ul
+      list-style: none
+      display: flex
+      justify-content: center
+      padding: 0
+      li
+        margin: 0 .5em
+        z-index: 1
+      li img
+        height: 1.5em
+
+
+@media (orientation: portrait)
+  .wrapper
+    flex-direction: column
+    justify-content: center
+    .left, .right
+      padding: 0
+    .left
+      h1
+        text-align: center
