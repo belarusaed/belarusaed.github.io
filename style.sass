@@ -6,6 +6,7 @@ body
   background-position: center
   color: #FFFFFF
   font-family: 'Montserrat', 'Noto Sans', 'Roboto', 'Segoe UI', sans-serif
+
   &:before
     content: ''
     position: fixed
@@ -15,34 +16,44 @@ body
     left: 0
     //z-index: -1
     background: rgba(0, 0, 0, 0.9)
+
 .wrapper
-  padding: 0 calc(50% - 570px)  // 570px is a half of "container" max width
+  padding: 0 calc(50% - 570px)
+  // 570px is a half of "container" max width
   height: 100vh
   display: flex
   justify-content: space-between
   align-items: center
+
   .left
     padding-left: 1em
+
     h1
       font-size: xxx-large
       transform: scaleY(1.15)
+
     p
       font-size: large
       transform: scaleY(1.15)
+
   .right
     padding-right: 1em
     text-align: center
     font-size: x-large
+
     h2
       transform: scaleY(1.15)
+
     ul
       list-style: none
       display: flex
       justify-content: center
       padding: 0
+
       li
         margin: 0 .5em
         z-index: 1
+
       li img
         height: 1.5em
 
@@ -51,8 +62,37 @@ body
   .wrapper
     flex-direction: column
     justify-content: center
+
     .left, .right
       padding: 0
+
     .left
       h1
         text-align: center
+
+@import "credit-card-template/card"
+
+#overlay
+  display: none
+  transition: all 2s
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 9999
+  background: rgba(0, 0, 0, 0.9)
+  justify-content: center
+  align-items: center
+  .card
+    &__logo
+      height: 64px
+    &__close
+      position: absolute
+      top: 10px
+      right: 20px
+      font-size: 1.5em
+      cursor: pointer
+
+.overlay--active
+  display: flex !important

@@ -1,0 +1,3 @@
+[submodule "credit-card-template"]
+	path = credit-card-template
+	url = https://github.com/nikazawila/credit-card-template.git

@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<script>document.body.style.backgroundImage = window.location.hostname === 'belarusaed.gay' ? 'url("gay.jpg")' : 'url("monika.jpg")';</script>
+<script>
+  document.body.style.backgroundImage = window.location.hostname === 'belarusaed.gay' ? 'url("gay.jpg")' : 'url("monika.jpg")';
+  function openCloseCard() {document.getElementById('overlay').classList.toggle('overlay--active')}
+</script>
 <div class="wrapper">
     <div class="left">
         <h1>belarusaed</h1>
@@ -19,12 +22,11 @@
     </div>
     <div class="right">
         <section>
-            <h2>Мае профілі на розных сайтах</h2>
+            <h2>Дзе на мяне падпісацца</h2>
             <ul>
                 <li><a href="https://t.me/belarusaedTheGreat"><img src="icons/telegram.svg" alt="Telegram"></a></li>
-                <li><a href="https://gettr.com/user/belarusaed"><img src="icons/gettr.svg" alt="GETTR"></a></li>
                 <li><a href="https://twitter.com/belarusaed"><img src="icons/twitter.svg" alt="Twitter"></a></li>
-                <li><a href="//github.com/belarusaed"><img src="icons/github.svg" alt="Github"></a></li>
+                <li><a href="https://github.com/belarusaed"><img src="icons/github.svg" alt="Github"></a></li>
             </ul>
         </section>
         <section>
@@ -33,6 +35,22 @@
                 <li><a href="//spellchecker.belarusaed.me"><img src="icons/spellcheck.svg" alt="Spellchecker"></a></li>
             </ul>
         </section>
+        <section>
+            <h2>Куды мне данаціць</h2>
+            <ul>
+                <li><a href="https://yoomoney.ru/to/4100116950167590"><img src="icons/yoomoney.svg" alt="Yoomoney"></a></li>
+                <li><img src="icons/credit-card.svg" alt="Bank card" style="cursor: pointer" onclick="openCloseCard()"></li>
+            </ul>
+        </section>
+    </div>
+    <div id="overlay">
+        <div class="card card--front">
+            <span class="card__close" onclick="openCloseCard()">x</span>
+            <div class="card__number">5351 0416 5642 9782</div>
+            <div class="card__expiry-date">01/24</div>
+            <div class="card__owner">ALIAKSIEJ RAZUMAU</div>
+            <img src="icons/mastercard.svg" class="card__logo" alt="Mastercard&REG; logo">
+        </div>
     </div>
 </div>
 </body>
